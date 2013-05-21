@@ -1,0 +1,37 @@
+<table class="table module">
+     <tr>
+         <td><h4>Tweets</h4></td>
+     </tr>
+
+    <tr ng-repeat="tweet in tweets.results">
+        <td class="row-fluid">
+            <div class="span2">
+                <a ng-href="#/profile/{{tweet.from_user}}">
+                    <img ng-src="{{tweet.profile_image_url}}" class="img-rounded"/>
+                </a>
+            </div>
+            <div class="span10">
+                <p>
+                    <b>{{tweet.from_user_name}}</b> <span class="muted">@{{tweet.from_user}}</span>
+                    <span class="muted pull-right">{{tweet.created_at | dateDelta}}</span>
+                </p>
+                <p>{{tweet.text}}</p>
+                <div class="row-fluid">
+                    <a class="span2" href="#">Open </a>
+                    <a class="span2" href="#"><i class="icon-reply"></i> Reply </a>
+                    <a class="span3" href="#"><i class="icon-retweet"></i> Retweeter </a>
+                    <a class="span2" href="#"><i class="icon-star"></i> Star </a>
+                    <a class="span2" href="#"><i class="icon-ellipsis-horizontal"></i> Plus </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+    <tr ng-hide="tweets.results.length >= 0">
+        <td><p class="text-center"><i class="icon-spinner icon-spin icon-4x"></i></p></td>
+    </tr>
+
+    <tr ng-show="tweets.results.length == 0">
+        <td><p class="text-center"><strong>No results!!!</strong></p></td>
+    </tr>
+</table>

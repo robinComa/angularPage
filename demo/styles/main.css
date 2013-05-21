@@ -1,0 +1,35 @@
+/* Will be compiled down to a single stylesheet with your sass files */
+body{
+    background-image: url("../img/bg-twitter.png");
+    background-repeat: no-repeat;
+    background-color: #C0DEED;
+}
+
+#container{
+    background-image: url("../img/bg-opacity.png");
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.module{
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.muted{
+    font-size: 10px;
+    margin-bottom: 0px;
+}
+
+strong {
+    display: block;
+    color: #333;
+    font-size: 14px;
+}
+
+.white *{
+    color: #ffffff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.5);
+    padding: 0px;
+    margin: 0px;
+}

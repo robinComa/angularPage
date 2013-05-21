@@ -1,0 +1,39 @@
+<table class="table table-bordered module">
+    <tr>
+        <td ng-style="{backgroundImage: backgroundImage, height : '240px'}" colspan="3">
+            <div class="span12">
+                <img class="offset5 span2 img-rounded img-polaroid" ng-src="{{user.profile_image_url}}"/>
+            </div>
+            <br>
+            <div class="span12 white">
+                <h2 class="text-center">{{user.name}}</h2>
+                <h3 class="text-center">@{{user.screen_name}}</h3>
+                <p class="text-center">{{user.description}}</p>
+                <p class="text-center">{{user.location}} - <a ng-href="{{user.url}}">{{user.url}}</a></p>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="span2">
+            <a href="#/tweets">
+                <strong>{{user.statuses_count}}</strong>
+                <p class="muted">TWEETS</p>
+            </a>
+        </td>
+        <td class="span2">
+            <a href="#/tweets">
+                <strong>{{user.friends_count}}</strong>
+                <p class="muted">FRIENDS</p>
+            </a>
+        </td>
+        <td class="span8">
+            <button class="btn pull-right"><i class="icon-twitter" ng-style="{color: '#0084B4'}"></i> <b>Follow</b></button>
+            <span class="pull-right">&nbsp;&nbsp;</span>
+            <button class="btn pull-right"><i class="icon-envelope-alt"></i></button>
+            <a href="#/tweets">
+                <strong>{{user.followers_count}}</strong>
+                <p class="muted">FOLLOWERS</p>
+            </a>
+        </td>
+    </tr>
+</table>
